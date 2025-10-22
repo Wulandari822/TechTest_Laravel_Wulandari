@@ -2,8 +2,7 @@
 
 Project ini adalah Technical Testing dari PT Timedoor Indonesia. 
 
-🚀 1. Persiapan & Kebutuhan Sistem
-✅ Prasyarat
+1. Persiapan & Kebutuhan Sistem
 
 Sebelum menjalankan project, pastikan sudah menginstal:
 
