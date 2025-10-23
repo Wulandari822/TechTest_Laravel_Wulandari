@@ -54,4 +54,6 @@ Jika menggunakan Laravel:
 1. ERD
    <img width="1131" height="681" alt="Timedoor Backend Programming drawio" src="https://github.com/user-attachments/assets/3b259d59-4c49-43b9-a9e5-55347fd7eb8c" />
    <img width="729" height="827" alt="Timedoor Backend Programming-Fase 2 drawio" src="https://github.com/user-attachments/assets/67e0a6d0-cdde-4827-b72b-be93e0e912eb" />
+   <img width="1051" height="787" alt="image" src="https://github.com/user-attachments/assets/1eb08a3f-0d61-4533-8db4-4e0e49ff5db1" />
+
 
