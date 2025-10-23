@@ -29,9 +29,7 @@ Langkah-langkah:
 
 Lalu sesuaikan konfigurasi database di dalam file .env:
 
-DB_DATABASE=perpustakaan
-DB_USERNAME=root
-DB_PASSWORD=
+<img width="241" height="147" alt="image" src="https://github.com/user-attachments/assets/a871b390-99c3-4ce6-89ab-c07799b21421" />
 
 4. Generate Key (Laravel)
 - php artisan key:generate
