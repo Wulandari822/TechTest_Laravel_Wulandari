@@ -40,8 +40,8 @@ Instalasi
 
 # Langkah Instalasi
 1. Clone Repository
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
+   git clone https:[//github.com/username/repo-name.git](https://github.com/Wulandari822/TechTest_Laravel_Wulandari.git)
+   cd TechTest_Laravel_Wulandari
 
 2. Install Dependencies
    composer install
