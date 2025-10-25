@@ -87,36 +87,35 @@
                                 </tbody>
                             </table>
                             <nav class="app-pagination d-flex justify-content-center align-items-center mt-3 mb-3">
-    <ul class="pagination mb-0 me-3">
+                                <ul class="pagination mb-0 me-3">
 
-        <!-- Tombol Previous -->
-        <li class="page-item {{ $authors->onFirstPage() ? 'disabled' : '' }}">
-            <a class="page-link"
-               href="{{ $authors->onFirstPage() ? '#' : $authors->previousPageUrl() }}">
-               Previous
-            </a>
-        </li>
+                                    <li class="page-item {{ $authors->onFirstPage() ? 'disabled' : '' }}">
+                                        <a class="page-link"
+                                            href="{{ $authors->onFirstPage() ? '#' : $authors->previousPageUrl() }}">
+                                            Previous
+                                        </a>
+                                    </li>
 
-        <!-- Tombol Next -->
-        <li class="page-item {{ $authors->currentPage() == $authors->lastPage() ? 'disabled' : '' }}">
-            <a class="page-link"
-               href="{{ $authors->currentPage() == $authors->lastPage() ? '#' : $authors->nextPageUrl() }}">
-               Next
-            </a>
-        </li>
-    </ul>
+                                    <li
+                                        class="page-item {{ $authors->currentPage() == $authors->lastPage() ? 'disabled' : '' }}">
+                                        <a class="page-link"
+                                            href="{{ $authors->currentPage() == $authors->lastPage() ? '#' : $authors->nextPageUrl() }}">
+                                            Next
+                                        </a>
+                                    </li>
+                                </ul>
 
-    <!-- Dropdown jumlah data per halaman -->
-    <form method="GET" action="{{ route('author') }}" class="d-inline-block ms-2">
-        <select name="perPage" onchange="this.form.submit()" class="form-select form-select-sm">
-            @foreach([10, 20, 50, 100] as $size)
-                <option value="{{ $size }}" {{ request('perPage', 100) == $size ? 'selected' : '' }}>
-                    {{ $size }} per page
-                </option>
-            @endforeach
-        </select>
-    </form>
-</nav>
+                                <form method="GET" action="{{ route('author') }}" class="d-inline-block ms-2">
+                                    <select name="perPage" onchange="this.form.submit()" class="form-select form-select-sm">
+                                        @foreach ([10, 20, 50, 100] as $size)
+                                            <option value="{{ $size }}"
+                                                {{ request('perPage', 100) == $size ? 'selected' : '' }}>
+                                                {{ $size }} per page
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </form>
+                            </nav>
 
 
                         </div>
@@ -125,15 +124,8 @@
                         </div> --}}
                     </div>
                 </div>
-                
+
             </div>
-
-            
-
-
-
-
-
 
         </div>
     </div>
@@ -198,7 +190,7 @@
 
                 rows.forEach(row => {
                     const cells = row.querySelectorAll('td');
-                    if (!cells.length) return; 
+                    if (!cells.length) return;
 
                     const noText = cells[0].textContent.trim().toLowerCase();
                     const nameText = cells[1].textContent.trim().toLowerCase();

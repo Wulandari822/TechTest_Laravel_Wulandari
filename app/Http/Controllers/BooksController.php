@@ -69,7 +69,7 @@ class BooksController extends Controller
 
 
 
-public function update(Request $request, $id)
+    public function update(Request $request, $id)
     {
         $book = Book::findOrFail($id);
         $request->validate([

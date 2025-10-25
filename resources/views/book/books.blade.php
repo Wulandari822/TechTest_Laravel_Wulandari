@@ -13,7 +13,6 @@
                     </div>
 
                     <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
-                        <!-- Search Form -->
                         <form method="GET" action="{{ route('books') }}" class="input-group"
                             style="flex: 1; min-width: 200px;">
                             <input type="text" name="search" class="form-control"
@@ -23,7 +22,6 @@
                             </button>
                         </form>
 
-                        <!-- Category Filter -->
                         <form method="GET" action="{{ route('books') }}" class="ms-2" style="min-width: 150px;">
                             <select class="form-select" name="kategori_id" onchange="this.form.submit()">
                                 <option value="" {{ request('kategori_id') == null ? 'selected' : '' }}>All</option>
@@ -544,13 +542,11 @@
             transactionModal.addEventListener('show.bs.modal', function(event) {
                 var button = event.relatedTarget;
 
-                // Data buku dari tombol
                 var bukuId = button.getAttribute('data-buku-id');
                 var judul = button.getAttribute('data-judul');
                 var hargaJual = parseFloat(button.getAttribute('data-harga-jual'));
                 var hargaSewa = parseFloat(button.getAttribute('data-harga-sewa'));
 
-                // Elements
                 var modal = transactionModal;
                 var jumlahInput = modal.querySelector('#modalJumlah');
                 var totalHargaInputDisplay = modal.querySelector('#modalTotalHarga');
@@ -559,7 +555,6 @@
                 var rentalFields = modal.querySelector('#rentalFields');
                 var modalJudul = modal.querySelector('#modalJudul');
 
-                // Set awal
                 modal.querySelector('#modalBukuId').value = bukuId;
                 modalJudul.textContent = judul;
                 jumlahInput.value = 1;
@@ -567,8 +562,8 @@
                 function updateTotal() {
                     var jumlah = parseInt(jumlahInput.value) || 1;
                     var total = tipeSelect.value === 'sell' ? jumlah * hargaJual : jumlah * hargaSewa;
-                    totalHargaInputDisplay.value = total.toLocaleString(); // tampil di input text
-                    totalHargaInputRaw.value = total; // dikirim ke backend
+                    totalHargaInputDisplay.value = total.toLocaleString(); 
+                    totalHargaInputRaw.value = total; 
                 }
 
                 function toggleRentalFields() {
@@ -584,11 +579,9 @@
                     updateTotal();
                 }
 
-                // Event listener
                 tipeSelect.addEventListener('change', toggleRentalFields);
                 jumlahInput.addEventListener('input', updateTotal);
 
-                // Set awal
                 toggleRentalFields();
             });
         });

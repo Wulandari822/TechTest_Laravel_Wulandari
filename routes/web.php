@@ -63,12 +63,12 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::middleware('guest')->group(function () {
-    Route::get('/', [RegisterController::class, 'index'])->name('register');
-    Route::post('/', [RegisterController::class, 'register']);
+    Route::middleware('guest')->group(function () {
+        Route::get('/', [RegisterController::class, 'index'])->name('register');
+        Route::post('/', [RegisterController::class, 'register']);
 
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
-    Route::post('/login', [LoginController::class, 'login']);
+        Route::get('/login', [LoginController::class, 'index'])->name('login');
+        Route::post('/login', [LoginController::class, 'login']);
 });
 
 
